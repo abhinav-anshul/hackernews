@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import { getStory } from "../services/HNAPI";
 import {
   StoryMeta,
@@ -36,4 +36,4 @@ function Story({ storyId }) {
   ) : null;
 }
 
-export default Story;
+export default memo(Story);
